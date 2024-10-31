@@ -1,11 +1,29 @@
 import pandas as pd
 
 
-
 from prophet import Prophet
 import matplotlib.pyplot as plt
 import streamlit as st
 from io import BytesIO
+
+import subprocess
+import sys
+
+# Lista de pacotes que você deseja instalar
+packages = [
+    'streamlit',
+    'prophet',
+    'pandas',
+    'matplotlib'
+]
+
+# Função para instalar pacotes
+def install_packages(packages):
+    for package in packages:
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
+
+# Instalar os pacotes
+install_packages(packages)
 
 # Função para carregar e processar os dados
 def load_data(file):
