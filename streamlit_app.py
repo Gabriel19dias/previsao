@@ -1,7 +1,6 @@
 import pandas as pd
-!pip install prophet
 
-import prophet
+
 
 from prophet import Prophet
 import matplotlib.pyplot as plt
