@@ -1,4 +1,6 @@
 import pandas as pd
+import prophet
+
 from prophet import Prophet
 import matplotlib.pyplot as plt
 import streamlit as st
